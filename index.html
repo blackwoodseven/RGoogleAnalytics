@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Rgoogleanalytics : R Library to easily extract data from the Google Analytics API into R">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Rgoogleanalytics</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Tatvic/RGoogleAnalytics">View on GitHub</a>
+
+          <h1 id="project_title">Rgoogleanalytics</h1>
+          <h2 id="project_tagline">R Library to easily extract data from the Google Analytics API into R</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Tatvic/RGoogleAnalytics/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Tatvic/RGoogleAnalytics/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>This repo is the new home for the RGoogleAnalytics library migrated from <a href="https://code.google.com/p/r-google-analytics/">Google Code SVN</a></p>
+
+<h2>
+<a name="what-is-it" class="anchor" href="#what-is-it"><span class="octicon octicon-link"></span></a>What is it</h2>
+
+<p>RGoogleAnalytics is a R Wrapper around the <a href="http://www.google.com/analytics/">Google Analytics</a> API. It allows fast and easy data extraction in R so that further statistical analysis can be run on the data</p>
+
+<h2>
+<a name="key-features" class="anchor" href="#key-features"><span class="octicon octicon-link"></span></a>Key Features</h2>
+
+<ul>
+<li><p>Provides Access to v3 of the <a href="https://developers.google.com/analytics/devguides/reporting/core/v3/">Google Analytics Core Reporting API</a></p></li>
+<li><p>Ability to <strong>pull more than 10,000 rows of data</strong> in batches via <strong>pagination</strong> of queries</p></li>
+<li><p>Ability to <strong>mitigate the effect of Query Sampling</strong> by splitting the date-range of queries and hence extract (nearly) unsampled data</p></li>
+<li><p>Supports authorization via OAuth 2.0</p></li>
+<li><p>In cases where queries are sampled, the output also returns the percentage of sessions that were used for the query</p></li>
+</ul>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To get the current released version from CRAN:</p>
+
+<div class="highlight highlight-R"><pre>install.packages<span class="p">(</span><span class="s">"RGoogleAnalytics"</span><span class="p">)</span>
+</pre></div>
+
+<p>To get the current development version from github:</p>
+
+<div class="highlight highlight-R"><pre><span class="c1"># require(devtools)</span>
+devtools<span class="o">::</span>install_github<span class="p">(</span><span class="s">"Tatvic/RGoogleAnalytics"</span><span class="p">)</span>
+</pre></div>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li><p><a href="http://cran.r-project.org/web/packages/httr/index.html">httr</a> handles the underlying OAuth2.0 Authorization flow and the API requests</p></li>
+<li><p><a href="http://cran.r-project.org/web/packages/lubridate/index.html">lubridate</a> handles the date manipulation logic underlying Query Partitioning</p></li>
+</ul>
+
+<h2>
+<a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h2>
+
+<p>Work on RGoogleAnalytics was started by Michael Pearmain at Google. He was supported by Nick Mihailowski (Google) and Vignesh Prajapati (Tatvic). </p>
+
+<h2>
+<a name="tutorials-and-use-cases" class="anchor" href="#tutorials-and-use-cases"><span class="octicon octicon-link"></span></a>Tutorials and Use-cases</h2>
+
+<p>Under development</p>
+
+<h2>
+<a name="important-links" class="anchor" href="#important-links"><span class="octicon octicon-link"></span></a>Important Links</h2>
+
+<ul>
+<li><p><a href="https://developers.google.com/analytics/devguides/reporting/core/dimsmets">List</a> of Valid Dimension/Metric Combinations from the Google Analytics API Reference Guide</p></li>
+<li><p><a href="http://ga-dev-tools.appspot.com/explorer/">Query Feed Explorer</a> allows you to test your queries for syntatical correctness. Once verified, the query parameters can then be copied to your R Script</p></li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rgoogleanalytics maintained by <a href="https://github.com/Tatvic">Tatvic</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
